@@ -10,7 +10,7 @@ import org.junit.Test;
 
 public class AccountTest {
 
-	private Account sut;
+	private Account sut=new Account();
 
 	private int scale = 2;
 
@@ -29,9 +29,9 @@ public class AccountTest {
 	public void shouldGettheSettedValue() {
 		// Input
 		BigDecimal expected = new BigDecimal(1);
-		expected.setScale(scale);
+		expected = expected.setScale(scale);
 		BigDecimal input = new BigDecimal(1);
-		input = input.setScale(scale);
+		input =input.setScale(scale);
 		// Call
 		sut.setAmount(input);
 		BigDecimal actual = sut.getAmount();

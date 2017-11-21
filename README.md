@@ -23,3 +23,5 @@ Now i have the class and i've tried to create an object Account but it does not 
 
 So I create the model.Now i had text and I see that their are missing things in the Model.
 I add methods and variable to the model.
+
+The test fail so i correct the model

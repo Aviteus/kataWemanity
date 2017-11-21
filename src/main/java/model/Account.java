@@ -4,15 +4,15 @@ import java.math.BigDecimal;
 
 public class Account {
 	
-	private BigDecimal amount;
+	private BigDecimal amount= BigDecimal.ZERO.setScale(2);
 
 	public BigDecimal getAmount() {
-		// TODO Auto-generated method stub
-		return null;
+		
+		return amount;
 	}
 
-	public void setAmount(BigDecimal input) {
-		// TODO Auto-generated method stub
+	public void setAmount(BigDecimal amount) {
+		this.amount=amount;
 		
 	}
 
