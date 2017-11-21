@@ -14,6 +14,9 @@ The goal of this project is to develop a simple application of deposit and Withd
 
 
 for this project, I develop using TDD.
- i use The MVC model, and i start with the model.
+ i use The MVC model, and i start with the model because both Controller and view need it and because it is independent.
  
  first I create the Test class.
+ 
+ 
+Now i have the class and i've tried to create an object Account but it does not exist.
