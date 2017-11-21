@@ -8,8 +8,12 @@ The goal of this project is to develop a simple application of deposit and Withd
 
 		starting hypothesis:
 
-- the user is already connected
-- the interface is the console
-- their are no minimum of money for the account
+- the user is already connected.
+- the interface is the console.
+- their are no minimum of money for the account.
 
 
+for this project, I develop using TDD.
+ i use The MVC model, and i start with the model.
+ 
+ first I create the Test class.
