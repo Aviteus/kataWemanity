@@ -20,3 +20,5 @@ for this project, I develop using TDD.
  
  
 Now i have the class and i've tried to create an object Account but it does not exist.
+
+So I create the model.
