@@ -19,3 +19,5 @@ for this project, I develop using TDD.
  It's time for the controller. this time i'll do less commit during the process.
  
  I just realize that I need a model for the History.
+ 
+ Now i add the Classes.
