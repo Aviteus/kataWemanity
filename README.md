@@ -17,7 +17,5 @@ for this project, I develop using TDD.
  i use The MVC model, and i start with the model because both Controller and view need it and because it is independent.
  
  It's time for the controller. this time i'll do less commit during the process.
- 
- I just realize that I need a model for the History.
- 
- Now i add the Classes.
+now that everything works i need the view
+
