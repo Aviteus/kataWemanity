@@ -35,7 +35,7 @@ public class HistoryTest {
 		HistoryOperation historyOperation = new HistoryOperation(timestamp, value, type, value);
 		//call
 		sut.setOperation(historyOperation);
-		LinkedList<HistoryOperation> list=sut.getHHistory();
+		LinkedList<HistoryOperation> list=sut.getHistory();
 		//assert
 		assertNotNull(list);
 		assertEquals(1, list.size());

@@ -10,7 +10,7 @@ public class History {
 		list.add(historyOperation);
 	}
 
-	public LinkedList<HistoryOperation> getHHistory() {
+	public LinkedList<HistoryOperation> getHistory() {
 		return list;
 	}
 

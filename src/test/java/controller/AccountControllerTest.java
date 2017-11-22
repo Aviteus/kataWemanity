@@ -32,7 +32,7 @@ public class AccountControllerTest {
 	public void shouldAddPositivNumber() {
 		// input
 		BigDecimal value = new BigDecimal(1000);
-		Mockito.when(account.getAmount()).thenReturn(new BigDecimal(1000));
+		Mockito.when(account.getAmount()).thenReturn(new BigDecimal(1000).setScale(2));
 		// call
 		BigDecimal result = sut.add(value);
 		// assert
@@ -53,10 +53,10 @@ public class AccountControllerTest {
 	public void shouldSubtractPositivNumber() {
 		// input
 		BigDecimal value = new BigDecimal(1000);
-		Mockito.when(account.getAmount()).thenReturn(new BigDecimal(1000));
+		Mockito.when(account.getAmount()).thenReturn(new BigDecimal(-1000).setScale(2));
 		BigDecimal expected = value.negate().setScale(2);
 		// call
-		BigDecimal result = sut.subtract(value);
+		BigDecimal result =  sut.subtract(value);
 		// assert
 		assertEquals(expected, result);
 	}
@@ -76,15 +76,15 @@ public class AccountControllerTest {
 		// input
 		BigDecimal value = new BigDecimal(1000);
 		BigDecimal value2 = new BigDecimal(500);
-		Mockito.when(account.getAmount()).thenReturn(new BigDecimal(1000));
+		Mockito.when(account.getAmount()).thenReturn(new BigDecimal(1000).setScale(2));
 		sut.add(value);
-		Mockito.when(account.getAmount()).thenReturn(new BigDecimal(500));
+		Mockito.when(account.getAmount()).thenReturn(new BigDecimal(500).setScale(2));
 		sut.subtract(value2);
 		// call
 		LinkedList<String> result = sut.getHistory();
 		// Assert
 		Assert.assertNotNull(result);
-		Assert.assertTrue(result.size() == 2);
+		Assert.assertEquals(2,result.size());
 	}
 
 }
