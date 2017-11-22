@@ -47,12 +47,13 @@ public class AccountView {
 				BigDecimal result = accountController.add(value);
 				if (result != null) {
 					System.out.println("you have " + result.toString() + " euros on your account");
+					menu();
 				} else {
 					System.out.println("this value is negative: not allowed");
 					add();
 				}
 			} else {
-				if (scan.next() == "q") {
+				if ("q".equals(scan.next())) {
 					menu();
 				} else {
 					System.out.println("wrong input");
@@ -73,6 +74,7 @@ public class AccountView {
 				BigDecimal result = accountController.subtract(value);
 				if (result != null) {
 					System.out.println("you have " + result.toString() + " euros on your account");
+					menu();
 				} else {
 					System.out.println("this value is negative: not allowed");
 					substract();
@@ -80,7 +82,7 @@ public class AccountView {
 			} else {
 				if (scan.hasNext()) {
 
-					if (scan.next() == "q") {
+					if ("q".equals(scan.next())) {
 						menu();
 					} else {
 						System.out.println("wrong input");
@@ -95,14 +97,14 @@ public class AccountView {
 		System.out.println("(press q to quit):");
 
 		LinkedList<String> result = accountController.getHistory();
-		for (int i = 1; i < result.size(); i++) {
+		for (int i = 0; i < result.size(); i++) {
 
 			System.out.println(result.get(i));
 		}
 		Scanner scan = new Scanner(System.in);
 		if (scan.hasNext()) {
 
-			if (scan.next() == "q") {
+			if ("q".equals(scan.next())) {
 				menu();
 			} else {
 				System.out.println("wrong input");

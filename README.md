@@ -14,8 +14,6 @@ The goal of this project is to develop a simple application of deposit and Withd
 
 
 for this project, I develop using TDD.
- i use The MVC model, and i start with the model because both Controller and view need it and because it is independent.
+ i use The MVC model.
  
- It's time for the controller. this time i'll do less commit during the process.
-now that everything works i need the view
-
+Now i add a main.
