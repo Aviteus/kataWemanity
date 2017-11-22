@@ -1,16 +1,14 @@
 package model;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 import java.math.BigDecimal;
-import java.math.BigInteger;
-import java.math.RoundingMode;
 
 import org.junit.Test;
 
 public class AccountTest {
 
-	private Account sut=new Account();
+	private Account sut = new Account();
 
 	private int scale = 2;
 
@@ -31,7 +29,7 @@ public class AccountTest {
 		BigDecimal expected = new BigDecimal(1);
 		expected = expected.setScale(scale);
 		BigDecimal input = new BigDecimal(1);
-		input =input.setScale(scale);
+		input = input.setScale(scale);
 		// Call
 		sut.setAmount(input);
 		BigDecimal actual = sut.getAmount();
