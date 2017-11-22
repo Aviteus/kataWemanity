@@ -34,7 +34,7 @@ public class AccountControllerTest {
 		BigDecimal value = new BigDecimal(1000);
 		Mockito.when(account.getAmount()).thenReturn(new BigDecimal(1000));
 		// call
-		BigDecimal result =sut.add(value);
+		BigDecimal result = sut.add(value);
 		// assert
 		assertEquals(value.setScale(2), result);
 	}
@@ -44,7 +44,7 @@ public class AccountControllerTest {
 		// input
 		BigDecimal value = new BigDecimal(-1000);
 		// call
-		BigDecimal result =sut.add(value);
+		BigDecimal result = sut.add(value);
 		// Assert
 		assertNull(result);
 	}
@@ -54,7 +54,7 @@ public class AccountControllerTest {
 		// input
 		BigDecimal value = new BigDecimal(1000);
 		Mockito.when(account.getAmount()).thenReturn(new BigDecimal(1000));
-		BigDecimal expected =value.negate().setScale(2);
+		BigDecimal expected = value.negate().setScale(2);
 		// call
 		BigDecimal result = sut.subtract(value);
 		// assert
@@ -81,10 +81,10 @@ public class AccountControllerTest {
 		Mockito.when(account.getAmount()).thenReturn(new BigDecimal(500));
 		sut.subtract(value2);
 		// call
-		LinkedList<HistoryOperation> result = sut.getHistory();
+		LinkedList<String> result = sut.getHistory();
 		// Assert
 		Assert.assertNotNull(result);
-		Assert.assertTrue(result.size()==2);
+		Assert.assertTrue(result.size() == 2);
 	}
 
 }
